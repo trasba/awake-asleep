@@ -1,0 +1,11 @@
+export const srcPath = {
+    update_cycle: 5000, /* set a reasonable number e.g. 5 min */
+    asleep: "./dummy-asleep.png",
+    awake: "./dummy-awake.png",
+    // do not use 00 or any leading 0 this will result in the error
+    // "Uncaught SyntaxError: Octal literals are not allowed in strict mode."
+    waketime_hour: 7,
+    waketime_minute: 30,
+    bedtime_hour: 12,
+    bedtime_minute: 30
+};

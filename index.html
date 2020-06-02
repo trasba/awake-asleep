@@ -1,0 +1,44 @@
+<html class=" idce_315 idc0_315">
+
+<head>
+  <script src="jquery.js"></script>
+</head>
+
+<body class="vsc-initialized">
+  <img id="night" src="" style="display: none;">
+  <img id="day" src="">
+
+  <script type="module" type="text/javascript">
+    import { srcPath } from './config.js';
+  
+    // document.body.innerHTML = srcPath.awake;
+    $('#day').attr("src",srcPath.awake);
+    $('#night').attr("src",srcPath.asleep);
+
+    SetImage(); //call the function once to display the right picture instantly
+
+    window.setInterval(SetImage, srcPath.update_cycle);
+
+    function SetImage() {
+      var nowdate = new Date();
+      var waketime = new Date();
+      waketime.setHours(srcPath.waketime_hour);
+      waketime.setMinutes(srcPath.waketime_minute);
+
+      var bedtime = new Date();
+      bedtime.setHours(srcPath.bedtime_hour);
+      bedtime.setMinutes(srcPath.bedtime_minute);
+
+      if (waketime < nowdate && nowdate < bedtime) {
+        $('#day').show();
+        $('#night').hide();
+      } else {
+        $('#night').show();
+        $('#day').hide();
+      }
+    }
+  </script>
+
+</body>
+
+</html>

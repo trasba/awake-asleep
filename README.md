@@ -12,7 +12,7 @@ The display is not dimable so, I intend to dim it manually by applying a tint fi
 ## prerequisites
 
 * raspberry pi + display
-*assumption the  display is setup and working*
+*assumption the display is setup and working*
 * wifi connectivity (for time syncronization)
 *included in raspberry pi 3 and higher
 or by USB Wifi*
@@ -44,7 +44,7 @@ or by USB Wifi*
 @xset -dpms
 @xset s noblank
 @point-rpi
-# load chromium in fullscree after reboot
+# load chromium in fullscreen after reboot
 @chromium-browser --kiosk http://localhost/aa
 ```
 ## configuration

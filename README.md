@@ -21,16 +21,16 @@ or by USB Wifi*
 
 >I will asume that this is a blank installation of rasbian / raspberry pi os
 
- * install a webserver (e.g. nginx or apache) + unclutter we'll use nginx in this example
-`sudo apt update && sudo apt upgrade -y && sudo apt install nginx unclutter`
- * clone the repository
+ * install a webserver (e.g. nginx or apache) + unclutter we'll use nginx in this example \
+ `sudo apt update && sudo apt upgrade -y && sudo apt install nginx unclutter`
+ * clone the repository \
 `git clone https://github.com/trasba/awake-asleep.git`
- * symlink the folder so that it is hosted
+ * symlink the folder so that it is hosted \
 `ln -s awake-asleep /var/www/aa` 
- * copy config.js from config.js.example
+ * copy config.js from config.js.example \
  `cp awake-asleep/config.js.example awake-asleep/config.js `
 
--> now you should be able to view the website by browsing to localhost
+-> now you should be able to view the website by browsing to localhost \
 `chromium-browser localhost/aa`
 
  * all left to do is to configure the raspberry to boot into a fullscreen state

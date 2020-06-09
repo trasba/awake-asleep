@@ -26,7 +26,7 @@ or by USB Wifi*
  * clone the repository \
 `git clone https://github.com/trasba/awake-asleep.git`
  * symlink the folder so that it is hosted \
-`ln -s awake-asleep /var/www/aa` 
+`sudo ln -s $PWD/awake-asleep /var/www/aa` 
  * copy config.js from config.js.example \
  `cp awake-asleep/config.js.example awake-asleep/config.js `
 
